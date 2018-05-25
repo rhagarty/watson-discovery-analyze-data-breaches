@@ -2,16 +2,16 @@
 declared-services:
   breaches-discovery-service:
     label: discovery
-    plan: lite
+    plan: standard
 applications:
 - path: .
   name: watsondiscoveryanalyzedatabreaches
   buildpack: sdk-for-nodejs
   command: npm start
   timeout: 180
-  memory: 256M
+  memory: 1024M
   instances: 1
-  disk_quota: 256M
+  disk_quota: 1024M
   random-route: false
   services:
   - breaches-discovery-service
